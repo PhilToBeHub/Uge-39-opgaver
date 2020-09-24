@@ -4,24 +4,24 @@ import java.util.Random;
 import java.io.*; 
 import java.util.Scanner; 
 
-// 4.a
-void setup() {
-  System.out.println(getRandom(arr));
 
+void setup() {
+  
+// 4.a
   for (int i=0; i<=100; i++) {
     if (i <= 100) { 
       System.out.println(i);
     }
   }
-  // 4.d
-  int num = 2;
-  System.out.println(num); 
+  // 4.c
+  System.out.println(getRandom(arr));
   
-  Scanner s = new Scanner(System.in); {
-  num = s.nextInt(); 
-
-  System.out.println("Entered integer is: " + num);
-  } 
+  // 4.d
+  System.out.println(factorial(3));
+  
+  // 4.e
+  //System.out.println("\t" + fibonacci(1,3) + "\t" + fibonacci(4,5));
+  
 }
 
 // 4.b
@@ -39,4 +39,16 @@ public int getRandom(int[] _arr) {
 int factorial(int num) {
   if (num == 0) return 0;
   return num + factorial(num-1);
+}
+
+// 4.e
+void fibonacci(int a, int b) {
+  println(a+ " \t" + b);
+  int x = a + b;
+  println(a+b);
+  if (x <10000) {
+    a = b;
+    b = x;
+    fibonacci(a,b);
+  }
 }
