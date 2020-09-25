@@ -17,10 +17,10 @@ void setup() {
   System.out.println(getRandom(arr));
   
   // 4.d
-  System.out.println(factorial(3));
+  factorial(3);
   
   // 4.e
-  //System.out.println("\t" + fibonacci(1,3) + "\t" + fibonacci(4,5));
+  fibonacci(1,1);
   
 }
 
@@ -37,18 +37,17 @@ public int getRandom(int[] _arr) {
 
 // 4.d
 int factorial(int num) {
-  if (num == 0) return 0;
-  return num + factorial(num-1);
+  if (num < 0) {
+  return 0;
+  }
+  println(num);
+  return factorial(num-1);
 }
 
 // 4.e
 void fibonacci(int a, int b) {
   println(a+ " \t" + b);
-  int x = a + b;
-  println(a+b);
-  if (x <10000) {
-    a = b;
-    b = x;
-    fibonacci(a,b);
-  }
+  if(a > 10000 || b > 10000) return 0;
+    return fibonacci(b, a+b);
+  
 }
